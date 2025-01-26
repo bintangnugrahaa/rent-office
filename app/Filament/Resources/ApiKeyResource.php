@@ -17,13 +17,19 @@ class ApiKeyResource extends Resource
 {
     protected static ?string $model = ApiKey::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-key';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+
+                Forms\Components\TextInput::make('key')
+                    ->required()
+                    ->maxLength(255)
             ]);
     }
 
@@ -31,7 +37,8 @@ class ApiKeyResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name')
+                    ->searchable()
             ])
             ->filters([
                 //
