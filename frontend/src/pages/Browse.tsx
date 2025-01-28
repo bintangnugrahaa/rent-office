@@ -1,3 +1,5 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+
 export default function Browse() {
   return (
     <>
@@ -113,7 +115,10 @@ export default function Browse() {
               alt="clients logo"
             />
             <img src="/assets/images/logos/Facebook 7.svg" alt="clients logo" />
-            <img src="/assets/images/logos/Microsoft 6.svg" alt="clients logo" />
+            <img
+              src="/assets/images/logos/Microsoft 6.svg"
+              alt="clients logo"
+            />
           </div>
           <div className="flex justify-center gap-[50px]">
             <div className="flex flex-col gap-[2px] text-center">
@@ -164,125 +169,133 @@ export default function Browse() {
         </div>
         <div className="swiper w-full">
           <div className="swiper-wrapper">
-            <div className="swiper-slide !w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
-              <a href="city-details.html" className="card">
-                <div className="relative flex shrink-0 w-[230px] h-[300px] rounded-[20px] overflow-hidden">
-                  <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] bg-[linear-gradient(180deg,_rgba(0,0,0,0)_49.87%,_rgba(0,0,0,0.8)_100%)] z-10">
-                    <h3 className="font-bold text-xl leading-[30px] text-white">
-                      Jakarta Pusat
-                    </h3>
-                    <p className="text-white">189 Offices</p>
+            <Swiper
+              direction="horizontal"
+              spaceBetween={30}
+              slidesPerView="auto"
+              slidesOffsetAfter={30}
+              slidesOffsetBefore={30}
+            >
+              <SwiperSlide className="!w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
+                <a href="city-details.html" className="card">
+                  <div className="relative flex shrink-0 w-[230px] h-[300px] rounded-[20px] overflow-hidden">
+                    <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] bg-[linear-gradient(180deg,_rgba(0,0,0,0)_49.87%,_rgba(0,0,0,0.8)_100%)] z-10">
+                      <h3 className="font-bold text-xl leading-[30px] text-white">
+                        Jakarta Pusat
+                      </h3>
+                      <p className="text-white">189 Offices</p>
+                    </div>
+                    <img
+                      src="/assets/images/thumbnails/thumbnails-2.png"
+                      className="absolute w-full h-full object-cover"
+                      alt="thumbnails"
+                    />
                   </div>
-                  <img
-                    src="/assets/images/thumbnails/thumbnails-2.png"
-                    className="absolute w-full h-full object-cover"
-                    alt="thumbnails"
-                  />
-                </div>
-              </a>
-            </div>
-            <div className="swiper-slide !w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
-              <a href="city-details.html" className="card">
-                <div className="relative flex shrink-0 w-[230px] h-[300px] rounded-[20px] overflow-hidden">
-                  <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] bg-[linear-gradient(180deg,_rgba(0,0,0,0)_49.87%,_rgba(0,0,0,0.8)_100%)] z-10">
-                    <h3 className="font-bold text-xl leading-[30px] text-white">
-                      Jakarta Pusat
-                    </h3>
-                    <p className="text-white">189 Offices</p>
+                </a>
+              </SwiperSlide>
+              <SwiperSlide className="!w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
+                <a href="city-details.html" className="card">
+                  <div className="relative flex shrink-0 w-[230px] h-[300px] rounded-[20px] overflow-hidden">
+                    <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] bg-[linear-gradient(180deg,_rgba(0,0,0,0)_49.87%,_rgba(0,0,0,0.8)_100%)] z-10">
+                      <h3 className="font-bold text-xl leading-[30px] text-white">
+                        Jakarta Pusat
+                      </h3>
+                      <p className="text-white">189 Offices</p>
+                    </div>
+                    <img
+                      src="/assets/images/thumbnails/thumbnails-1.png"
+                      className="absolute w-full h-full object-cover"
+                      alt="thumbnails"
+                    />
                   </div>
-                  <img
-                    src="/assets/images/thumbnails/thumbnails-1.png"
-                    className="absolute w-full h-full object-cover"
-                    alt="thumbnails"
-                  />
-                </div>
-              </a>
-            </div>
-            <div className="swiper-slide !w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
-              <a href="city-details.html" className="card">
-                <div className="relative flex shrink-0 w-[230px] h-[300px] rounded-[20px] overflow-hidden">
-                  <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] bg-[linear-gradient(180deg,_rgba(0,0,0,0)_49.87%,_rgba(0,0,0,0.8)_100%)] z-10">
-                    <h3 className="font-bold text-xl leading-[30px] text-white">
-                      Bandung Utara
-                    </h3>
-                    <p className="text-white">189 Offices</p>
+                </a>
+              </SwiperSlide>
+              <SwiperSlide className="!w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
+                <a href="city-details.html" className="card">
+                  <div className="relative flex shrink-0 w-[230px] h-[300px] rounded-[20px] overflow-hidden">
+                    <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] bg-[linear-gradient(180deg,_rgba(0,0,0,0)_49.87%,_rgba(0,0,0,0.8)_100%)] z-10">
+                      <h3 className="font-bold text-xl leading-[30px] text-white">
+                        Bandung Utara
+                      </h3>
+                      <p className="text-white">189 Offices</p>
+                    </div>
+                    <img
+                      src="/assets/images/thumbnails/thumbnails-3.png"
+                      className="absolute w-full h-full object-cover"
+                      alt="thumbnails"
+                    />
                   </div>
-                  <img
-                    src="/assets/images/thumbnails/thumbnails-3.png"
-                    className="absolute w-full h-full object-cover"
-                    alt="thumbnails"
-                  />
-                </div>
-              </a>
-            </div>
-            <div className="swiper-slide !w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
-              <a href="city-details.html" className="card">
-                <div className="relative flex shrink-0 w-[230px] h-[300px] rounded-[20px] overflow-hidden">
-                  <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] bg-[linear-gradient(180deg,_rgba(0,0,0,0)_49.87%,_rgba(0,0,0,0.8)_100%)] z-10">
-                    <h3 className="font-bold text-xl leading-[30px] text-white">
-                      Jakarta Pusat
-                    </h3>
-                    <p className="text-white">189 Offices</p>
+                </a>
+              </SwiperSlide>
+              <SwiperSlide className="!w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
+                <a href="city-details.html" className="card">
+                  <div className="relative flex shrink-0 w-[230px] h-[300px] rounded-[20px] overflow-hidden">
+                    <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] bg-[linear-gradient(180deg,_rgba(0,0,0,0)_49.87%,_rgba(0,0,0,0.8)_100%)] z-10">
+                      <h3 className="font-bold text-xl leading-[30px] text-white">
+                        Jakarta Pusat
+                      </h3>
+                      <p className="text-white">189 Offices</p>
+                    </div>
+                    <img
+                      src="/assets/images/thumbnails/thumbnails-4.png"
+                      className="absolute w-full h-full object-cover"
+                      alt="thumbnails"
+                    />
                   </div>
-                  <img
-                    src="/assets/images/thumbnails/thumbnails-4.png"
-                    className="absolute w-full h-full object-cover"
-                    alt="thumbnails"
-                  />
-                </div>
-              </a>
-            </div>
-            <div className="swiper-slide !w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
-              <a href="city-details.html" className="card">
-                <div className="relative flex shrink-0 w-[230px] h-[300px] rounded-[20px] overflow-hidden">
-                  <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] bg-[linear-gradient(180deg,_rgba(0,0,0,0)_49.87%,_rgba(0,0,0,0.8)_100%)] z-10">
-                    <h3 className="font-bold text-xl leading-[30px] text-white">
-                      Bandung Utara
-                    </h3>
-                    <p className="text-white">189 Offices</p>
+                </a>
+              </SwiperSlide>
+              <SwiperSlide className="!w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
+                <a href="city-details.html" className="card">
+                  <div className="relative flex shrink-0 w-[230px] h-[300px] rounded-[20px] overflow-hidden">
+                    <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] bg-[linear-gradient(180deg,_rgba(0,0,0,0)_49.87%,_rgba(0,0,0,0.8)_100%)] z-10">
+                      <h3 className="font-bold text-xl leading-[30px] text-white">
+                        Bandung Utara
+                      </h3>
+                      <p className="text-white">189 Offices</p>
+                    </div>
+                    <img
+                      src="/assets/images/thumbnails/thumbnails-5.png"
+                      className="absolute w-full h-full object-cover"
+                      alt="thumbnails"
+                    />
                   </div>
-                  <img
-                    src="/assets/images/thumbnails/thumbnails-5.png"
-                    className="absolute w-full h-full object-cover"
-                    alt="thumbnails"
-                  />
-                </div>
-              </a>
-            </div>
-            <div className="swiper-slide !w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
-              <a href="city-details.html" className="card">
-                <div className="relative flex shrink-0 w-[230px] h-[300px] rounded-[20px] overflow-hidden">
-                  <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] bg-[linear-gradient(180deg,_rgba(0,0,0,0)_49.87%,_rgba(0,0,0,0.8)_100%)] z-10">
-                    <h3 className="font-bold text-xl leading-[30px] text-white">
-                      Jakarta Pusat
-                    </h3>
-                    <p className="text-white">189 Offices</p>
+                </a>
+              </SwiperSlide>
+              <SwiperSlide className="!w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
+                <a href="city-details.html" className="card">
+                  <div className="relative flex shrink-0 w-[230px] h-[300px] rounded-[20px] overflow-hidden">
+                    <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] bg-[linear-gradient(180deg,_rgba(0,0,0,0)_49.87%,_rgba(0,0,0,0.8)_100%)] z-10">
+                      <h3 className="font-bold text-xl leading-[30px] text-white">
+                        Jakarta Pusat
+                      </h3>
+                      <p className="text-white">189 Offices</p>
+                    </div>
+                    <img
+                      src="/assets/images/thumbnails/thumbnails-6.png"
+                      className="absolute w-full h-full object-cover"
+                      alt="thumbnails"
+                    />
                   </div>
-                  <img
-                    src="/assets/images/thumbnails/thumbnails-6.png"
-                    className="absolute w-full h-full object-cover"
-                    alt="thumbnails"
-                  />
-                </div>
-              </a>
-            </div>
-            <div className="swiper-slide !w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
-              <a href="city-details.html" className="card">
-                <div className="relative flex shrink-0 w-[230px] h-[300px] rounded-[20px] overflow-hidden">
-                  <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] bg-[linear-gradient(180deg,_rgba(0,0,0,0)_49.87%,_rgba(0,0,0,0.8)_100%)] z-10">
-                    <h3 className="font-bold text-xl leading-[30px] text-white">
-                      Bandung Utara
-                    </h3>
-                    <p className="text-white">189 Offices</p>
+                </a>
+              </SwiperSlide>
+              <SwiperSlide className="!w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
+                <a href="city-details.html" className="card">
+                  <div className="relative flex shrink-0 w-[230px] h-[300px] rounded-[20px] overflow-hidden">
+                    <div className="relative flex flex-col justify-end w-full h-full p-5 gap-[2px] bg-[linear-gradient(180deg,_rgba(0,0,0,0)_49.87%,_rgba(0,0,0,0.8)_100%)] z-10">
+                      <h3 className="font-bold text-xl leading-[30px] text-white">
+                        Bandung Utara
+                      </h3>
+                      <p className="text-white">189 Offices</p>
+                    </div>
+                    <img
+                      src="/assets/images/thumbnails/thumbnails-7.png"
+                      className="absolute w-full h-full object-cover"
+                      alt="thumbnails"
+                    />
                   </div>
-                  <img
-                    src="/assets/images/thumbnails/thumbnails-7.png"
-                    className="absolute w-full h-full object-cover"
-                    alt="thumbnails"
-                  />
-                </div>
-              </a>
-            </div>
+                </a>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </section>
