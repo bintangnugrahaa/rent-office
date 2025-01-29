@@ -1,27 +1,30 @@
-export default function OfficeCard() {
+import { Office } from "../types/type";
+
+export default function OfficeCard({ office }: OfficeCardProps) {
+  const baseURL = "http://127.0.0.1:8000/storage";
   return (
-    <a href="details.html" className="card">
+    <div className="card">
       <div className="flex flex-col rounded-[20px] border border-[#E0DEF7] bg-white overflow-hidden">
         <div className="thumbnail-container relative w-full h-[200px]">
           <p className="absolute top-5 left-5 w-fit rounded-full p-[6px_16px] bg-[#0D903A] font-bold text-sm leading-[21px] text-[#F7F7FD]">
             Popular
           </p>
           <img
-            src="/assets/images/thumbnails/thumbnails-1.png"
+            src={`${baseURL}/${office.thumbnail}`}
             className="w-full h-full object-cover"
             alt="thumbnails"
           />
         </div>
         <div className="card-detail-container flex flex-col p-5 pb-[30px] gap-4">
           <h3 className="line-clamp-2 font-bold text-[22px] leading-[36px] h-[72px]">
-            Angga Park Central Master Silicon Valley Star Class
+            {office.name}
           </h3>
           <div className="flex items-center justify-between">
             <p className="font-semibold text-xl leading-[30px]">
-              Rp 18.560.000
+              Rp {office.price.toLocaleString("ID")}
             </p>
             <div className="flex items-center justify-end gap-[6px]">
-              <p className="font-semibold">20 days</p>
+              <p className="font-semibold">{office.duration} days</p>
               <img
                 src="/assets/images/icons/clock.svg"
                 className="w-6 h-6"
@@ -37,7 +40,7 @@ export default function OfficeCard() {
                 className="w-6 h-6"
                 alt="icon"
               />
-              <p className="font-semibold">Jakarta Pusat</p>
+              <p className="font-semibold">{office.city.name}</p>
             </div>
             <div className="flex items-center justify-end gap-[6px]">
               <p className="font-semibold">4.5/5</p>
@@ -69,6 +72,10 @@ export default function OfficeCard() {
           </div>
         </div>
       </div>
-    </a>
+    </div>
   );
+}
+
+interface OfficeCardProps {
+  office: Office;
 }
