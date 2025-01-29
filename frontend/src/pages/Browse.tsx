@@ -101,7 +101,7 @@ export default function Browse() {
             className="absolute right-0 w-[calc(100%-((100%-1130px)/2)-305px)] h-[720px] rounded-bl-[40px] overflow-hidden"
           >
             <img
-              src="/assets/images/backgrounds/banner.png"
+              src="/assets/images/backgrounds/banner.jpg"
               className="w-full h-full object-cover"
               alt="hero background"
             />
