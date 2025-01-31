@@ -4,7 +4,7 @@ import axios from "axios";
 import { Office } from "../types/type";
 
 export default function BrowseOfficeWrapper() {
-  const [offices, setCities] = useState<Office[]>([]);
+  const [offices, setOffice] = useState<Office[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -12,11 +12,12 @@ export default function BrowseOfficeWrapper() {
     axios
       .get("http://127.0.0.1:8000/api/offices", {
         headers: {
-          
+          "X-API-KEY":
+            "**********",
         },
       })
       .then((response) => {
-        setCities(response.data.data);
+        setOffice(response.data.data);
         setLoading(false);
       })
       .catch((error) => {
