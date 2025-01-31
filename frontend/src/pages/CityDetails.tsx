@@ -14,8 +14,7 @@ export default function CityDetails() {
     axios
       .get(`http://127.0.0.1:8000/api/city/${slug}`, {
         headers: {
-          "X-API-KEY":
-            "**********",
+          "X-API-KEY": import.meta.env.VITE_API_KEY,
         },
       })
       .then((response) => {
