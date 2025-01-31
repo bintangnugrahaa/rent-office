@@ -3,6 +3,7 @@ import CityCard from "../components/CityCard";
 import { useEffect, useState } from "react";
 import { City } from "../types/type";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function BrowseCityWrapper() {
   const [cities, setCities] = useState<City[]>([]);
@@ -13,7 +14,8 @@ export default function BrowseCityWrapper() {
     axios
       .get("http://127.0.0.1:8000/api/cities", {
         headers: {
-   
+          "X-API-KEY":
+            "**********",
         },
       })
       .then((response) => {
@@ -62,7 +64,9 @@ export default function BrowseCityWrapper() {
                 key={city.id}
                 className="!w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]"
               >
-                <CityCard city={city}></CityCard>
+                <Link to={`/city/${city.slug}`}>
+                  <CityCard city={city}></CityCard>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>
