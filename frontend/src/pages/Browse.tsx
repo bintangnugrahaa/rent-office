@@ -64,8 +64,8 @@ export default function Browse() {
               Grow Your Business.
             </h1>
             <p className="text-lg leading-8 text-[#000929]">
-              Kantor yang tepat dapat memberikan impact pekerjaan menjadi lebih
-              baik dan sehat dalam tumbuhkan karir.
+              The right workplace can significantly enhance job performance and
+              foster a healthy environment for career growth.
             </p>
             <div className="flex items-center gap-5">
               <a
@@ -178,7 +178,7 @@ export default function Browse() {
                 Privacy-First Design
               </p>
               <p className="text-sm leading-[24px]">
-                Lorem available without even higher tax that cost much
+                Ensuring data security and confidentiality at every level.
               </p>
             </div>
           </div>
@@ -195,7 +195,7 @@ export default function Browse() {
                 Easy Move Access
               </p>
               <p className="text-sm leading-[24px]">
-                Lorem available without even higher tax that cost much
+                Seamlessly accessible with minimal hassle.
               </p>
             </div>
           </div>
@@ -212,7 +212,7 @@ export default function Browse() {
                 Flexibility Spaces
               </p>
               <p className="text-sm leading-[24px]">
-                Lorem available without even higher tax that cost much
+                Adaptable workspaces tailored to your needs.
               </p>
             </div>
           </div>
@@ -229,7 +229,7 @@ export default function Browse() {
                 Top-Rated Office
               </p>
               <p className="text-sm leading-[24px]">
-                Lorem available without even higher tax that cost much
+                Recognized for excellence in workplace quality.
               </p>
             </div>
           </div>
@@ -246,7 +246,7 @@ export default function Browse() {
                 Extra Snacks Available
               </p>
               <p className="text-sm leading-[24px]">
-                Lorem available without even higher tax that cost much
+                Complimentary refreshments to keep you energized.
               </p>
             </div>
           </div>
@@ -263,7 +263,7 @@ export default function Browse() {
                 Sustain for Business
               </p>
               <p className="text-sm leading-[24px]">
-                Lorem available without even higher tax that cost much
+                Designed for long-term business growth and success.
               </p>
             </div>
           </div>
