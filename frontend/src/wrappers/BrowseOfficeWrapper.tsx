@@ -12,8 +12,7 @@ export default function BrowseOfficeWrapper() {
     axios
       .get("http://127.0.0.1:8000/api/offices", {
         headers: {
-          "X-API-KEY":
-            "**********",
+          "X-API-KEY": import.meta.env.VITE_API_KEY,
         },
       })
       .then((response) => {
