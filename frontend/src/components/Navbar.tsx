@@ -4,25 +4,21 @@ export default function Navbar() {
   return (
     <nav className="bg-white">
       <div className="flex items-center justify-between w-full max-w-[1130px] py-[22px] mx-auto">
-        <Link to={`/`}>
-          <a href="#">
-            <img src="/assets/images/logos/logo.svg" alt="logo" />
-          </a>
+        <Link to="/">
+          <img src="/assets/images/logos/logo.svg" alt="logo" />
         </Link>
         <ul className="flex items-center gap-[50px] w-fit">
           <li>
-            <Link to={`/`}>
-              <a href="#">Browse</a>
-            </Link>
+            <Link to="/">Browse</Link>
           </li>
           <li>
-            <a href="">Popular</a>
+            <a href="#">Popular</a>
           </li>
           <li>
-            <a href="">Categories</a>
+            <a href="#">Categories</a>
           </li>
           <li>
-            <a href="">Events</a>
+            <a href="#">Events</a>
           </li>
           <li>
             <a href="view-booking-details.html">My Booking</a>
