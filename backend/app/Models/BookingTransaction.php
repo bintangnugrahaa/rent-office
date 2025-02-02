@@ -25,9 +25,10 @@ class BookingTransaction extends Model
 
     public static function generateUniqueTrxId()
     {
-        $prefix = 'F0';
+        $prefix = 'R0'; // Awalan Booking ID
         do {
-            $randomString = $prefix . mt_rand(1000, 9999);
+            // Generate kombinasi huruf dan angka secara acak
+            $randomString = $prefix . strtoupper(substr(str_shuffle('ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'), 0, 4));
         } while (self::where('booking_trx_id', $randomString)->exists());
 
         return $randomString;
