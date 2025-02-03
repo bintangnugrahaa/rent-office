@@ -289,7 +289,7 @@ export default function Details() {
                     />
                   </div>
                   <div className="flex flex-col gap-[2px]">
-                    <p className="font-bold">Masayoshi</p>
+                    <p className="font-bold">Bintang</p>
                     <p className="text-sm leading-[21px]">Sales Manager</p>
                   </div>
                 </div>
@@ -314,13 +314,13 @@ export default function Details() {
                 <div className="flex items-center gap-4">
                   <div className="w-[60px] h-[60px] rounded-full overflow-hidden">
                     <img
-                      src="/assets/images/photos/photo-2.png"
+                      src="/assets/images/photos/photo-2.jpeg"
                       className="w-full h-full object-cover"
                       alt="photo"
                     />
                   </div>
                   <div className="flex flex-col gap-[2px]">
-                    <p className="font-bold">Fuji Ovina</p>
+                    <p className="font-bold">Michelle</p>
                     <p className="text-sm leading-[21px]">Sales Manager</p>
                   </div>
                 </div>
