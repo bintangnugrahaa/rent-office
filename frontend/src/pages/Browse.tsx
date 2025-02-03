@@ -1,8 +1,23 @@
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import BrowseCityWrapper from "../wrappers/BrowseCityWrapper";
 import BrowseOfficeWrapper from "../wrappers/BrowseOfficeWrapper";
 
 export default function Browse() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [videoUrl, setVideoUrl] = useState<string>("");
+
+  const handleWatchStoryClick = () => {
+    // Set video URL (replace with your actual video URL)
+    setVideoUrl("https://www.youtube.com/embed/xhP_0ClYh84?autoplay=1");
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setVideoUrl(""); // Stop the video when modal is closed
+  };
+
   return (
     <>
       <Navbar />
@@ -36,7 +51,7 @@ export default function Browse() {
             </p>
             <div className="flex items-center gap-5">
               <a
-                href="#"
+                href="#Fresh-Space"
                 className="flex items-center rounded-full p-[20px_26px] gap-3 bg-[#0D903A]"
               >
                 <img
@@ -48,19 +63,44 @@ export default function Browse() {
                   Explore Now
                 </span>
               </a>
-              <a
-                href="#"
-                className="flex items-center rounded-full border border-[#000929] p-[20px_26px] gap-3 bg-white"
-              >
-                <img
-                  src="/assets/images/icons/video-octagon.svg"
-                  className="w-[30px] h-[30px]"
-                  alt="icon"
-                />
-                <span className="font-semibold text-xl leading-[30px]">
-                  Watch Story
-                </span>
-              </a>
+              <div>
+                <a
+                  href="#"
+                  className="flex items-center rounded-full border border-[#000929] p-[20px_26px] gap-3 bg-white"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleWatchStoryClick();
+                  }}
+                >
+                  <img
+                    src="/assets/images/icons/video-octagon.svg"
+                    className="w-[30px] h-[30px]"
+                    alt="icon"
+                  />
+                  <span className="font-semibold text-xl leading-[30px]">
+                    Watch Story
+                  </span>
+                </a>
+
+                {isModalOpen && (
+                  <div className="modal">
+                    <div className="modal-content">
+                      <span className="close-btn" onClick={handleCloseModal}>
+                        X Close
+                      </span>
+
+                      <iframe
+                        width="560"
+                        height="315"
+                        src={videoUrl}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
           <div
