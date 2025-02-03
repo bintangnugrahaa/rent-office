@@ -145,12 +145,13 @@ export default function BookOffice() {
         </h1>
         <div className="absolute w-full h-full bg-[linear-gradient(180deg,_rgba(0,0,0,0)_0%,#000000_91.83%)] z-10" />
         <img
-          src="/assets/images/thumbnails/thumbnail-details-4.png"
+          src={`${baseURL}/${office.thumbnail}`}
           className="absolute w-full h-full object-cover object-top"
           alt=""
         />
       </div>
-      <form onSubmit={handleSubmit}
+      <form
+        onSubmit={handleSubmit}
         action="booking-finished.html"
         className="relative flex justify-center max-w-[1130px] mx-auto gap-[30px] mb-20 z-20"
       >
@@ -258,8 +259,8 @@ export default function BookOffice() {
               alt="icon"
             />
             <p className="font-semibold leading-[28px]">
-              Kami akan melindungi privasi Anda sebaik mungkin sehingga dapat
-              fokus bekerja
+              We will protect your privacy to the best of our ability, allowing
+              you to focus on your work.
             </p>
           </div>
           <hr className="border-[#F6F5FD]" />
@@ -327,8 +328,8 @@ export default function BookOffice() {
                 alt=""
               />
               <p className="font-semibold text-sm leading-[24px] z-10">
-                Tolong perhatikan kode unik berikut ketika melakukan pembayaran
-                kantor
+                Please pay attention to the following unique code when making
+                the office payment.
               </p>
             </div>
           </div>
@@ -345,7 +346,7 @@ export default function BookOffice() {
               </div>
               <div className="flex flex-col gap-[2px]">
                 <div className="flex items-center gap-1">
-                  <p className="font-semibold">FirstOffice Angga</p>
+                  <p className="font-semibold">PT Nanuraga Jaya Abadi</p>
                   <img
                     src="/assets/images/icons/verify.svg"
                     className="w-[18px] h-[18px]"
@@ -365,7 +366,7 @@ export default function BookOffice() {
               </div>
               <div className="flex flex-col gap-[2px]">
                 <div className="flex items-center gap-1">
-                  <p className="font-semibold">FirstOffice Angga</p>
+                  <p className="font-semibold">PT Nanuraga Jaya Abadi</p>
                   <img
                     src="/assets/images/icons/verify.svg"
                     className="w-[18px] h-[18px]"
