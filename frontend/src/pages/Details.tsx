@@ -314,7 +314,7 @@ export default function Details() {
                 <div className="flex items-center gap-4">
                   <div className="w-[60px] h-[60px] rounded-full overflow-hidden">
                     <img
-                      src="/assets/images/photos/photo-2.jpeg"
+                      src="/assets/images/photos/photo-2.png"
                       className="w-full h-full object-cover"
                       alt="photo"
                     />
