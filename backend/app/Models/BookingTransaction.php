@@ -25,7 +25,7 @@ class BookingTransaction extends Model
 
     public static function generateUniqueTrxId()
     {
-        $prefix = 'R0'; // Awalan Booking ID
+        $prefix = 'RO'; // Awalan Booking ID
         do {
             // Generate kombinasi huruf dan angka secara acak
             $randomString = $prefix . strtoupper(substr(str_shuffle('ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'), 0, 4));
