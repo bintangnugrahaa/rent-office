@@ -40,6 +40,8 @@ export default function CityDetails() {
     return <p>Category not found</p>;
   }
 
+  const baseURL = "http://127.0.0.1:8000/storage";
+
   return (
     <>
       <Navbar />
@@ -51,7 +53,7 @@ export default function CityDetails() {
           >
             <h1 className="font-extrabold text-[50px] leading-[60px]">
               Great Office in <br />{" "}
-              <span className="text-[#0D903A]">{city.name} City</span>
+              <span className="text-[#0D903A]">{city.name}</span>
             </h1>
             <p className="text-lg leading-8 text-[#000929]">
               The right workplace can significantly enhance job performance and
@@ -63,7 +65,7 @@ export default function CityDetails() {
             className="absolute right-0 w-[calc(100%-((100%-1130px)/2)-305px)] h-[434px] rounded-bl-[40px] overflow-hidden"
           >
             <img
-              src="/assets/images/backgrounds/banner.jpg"
+              src={`${baseURL}/${city.photo}`}
               className="w-full h-full object-cover"
               alt="hero background"
             />
