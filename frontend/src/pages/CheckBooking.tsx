@@ -240,7 +240,7 @@ export default function CheckBooking() {
                   alt="icon"
                 />
                 <p className="font-semibold leading-[28px]">
-                  Privasi Anda aman bersama kami.
+                  Your privacy is secure with us.
                 </p>
               </div>
             </div>
@@ -249,7 +249,7 @@ export default function CheckBooking() {
               <div className="flex flex-col gap-5">
                 {bookingDetails.is_paid ? (
                   <div className="flex items-center justify-between">
-                    <p className="font-semibold">Status Pembayaran</p>
+                    <p className="font-semibold">Payment Status</p>
                     <p className="rounded-full w-fit p-[6px_16px] bg-[#0D903A] font-bold text-sm leading-[21px] text-[#F7F7FD]">
                       SUCCESS
                     </p>
@@ -275,7 +275,7 @@ export default function CheckBooking() {
                 <div className="flex items-center justify-between">
                   <p className="font-semibold">Total Amount</p>
                   <p className="font-bold text-[22px] leading-[33px] text-[#0D903A]">
-                    Rp {bookingDetails.office.price.toLocaleString("ID")}
+                    Rp {bookingDetails.total_amount.toLocaleString("ID")}
                   </p>
                 </div>
               </div>
