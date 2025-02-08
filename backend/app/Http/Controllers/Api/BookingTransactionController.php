@@ -53,10 +53,10 @@ class BookingTransactionController extends Controller
         $twilio = new Client($sid, $token);
 
         // Membuat pesan dengan baris baru
-        $messageBody = "Hi {$bookingTransaction->name}, Terima kasih telah booking kantor di RentOffice.\n\n";
-        $messageBody .= "Pesanan kantor {$bookingTransaction->officeSpace->name} Anda sedang kami proses dengan Booking ";
-        $messageBody .= "TRX ID: {$bookingTransaction->booking_trx_id}.\n\n";
-        $messageBody .= "Kami akan menginformasikan kembali status pemesanan Anda secepat mungkin.";
+        $messageBody = "Hi {$bookingTransaction->name}, thank you for booking an office space with RentOffice.\n\n";
+        $messageBody .= "Your office space reservation at {$bookingTransaction->officeSpace->name} is currently being processed ";
+        $messageBody .= "with Booking TRX ID: {$bookingTransaction->booking_trx_id}.\n\n";
+        $messageBody .= "We will update you on your booking status as soon as possible.";
 
         // Mengirim pesan melalui SMS dengan Twilio
         $message = $twilio->messages->create(
