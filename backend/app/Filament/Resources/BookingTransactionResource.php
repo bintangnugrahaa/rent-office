@@ -132,7 +132,7 @@ class BookingTransactionResource extends Resource
                         $twilio->messages->create(
                             "whatsapp:+{$record->phone_number}", // Nomor tujuan
                             [
-                                "from" => getenv("TWILIO_PHONE_NUMBER"), // Nomor pengirim Twilio untuk WhatsApp
+                                "from" => "whatsapp:+14155238886", // Nomor pengirim Twilio untuk WhatsApp
                                 "body" => $messageBody, // Pesan yang dikirim
                             ]
                         );

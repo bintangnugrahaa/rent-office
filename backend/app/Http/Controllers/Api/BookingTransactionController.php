@@ -71,7 +71,7 @@ class BookingTransactionController extends Controller
         $twilio->messages->create(
             "whatsapp:+{$bookingTransaction->phone_number}", // Nomor tujuan
             [
-                "from" => getenv("TWILIO_PHONE_NUMBER"), // Nomor pengirim Twilio untuk WhatsApp
+                "from" => "whatsapp:+14155238886", // Nomor pengirim Twilio untuk WhatsApp
                 "body" => $messageBody, // Pesan yang dikirim
             ]
         );
