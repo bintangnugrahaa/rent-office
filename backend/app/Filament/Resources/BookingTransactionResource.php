@@ -120,11 +120,20 @@ class BookingTransactionResource extends Resource
                         $messageBody .= "If you have any inquiries, feel free to contact our customer support at wa.me/6285155344998.";
 
                         // Mengirim pesan SMS
-                        $message = $twilio->messages->create(
-                            "+{$record->phone_number}", // Nomor tujuan
+                        // $message = $twilio->messages->create(
+                        //     "+{$record->phone_number}", // Nomor tujuan
+                        //     [
+                        //         "body" => $messageBody,
+                        //         "from" => getenv("TWILIO_PHONE_NUMBER"),
+                        //     ]
+                        // );
+
+                        // Kirim melalui WhatsApp
+                        $twilio->messages->create(
+                            "whatsapp:+{$record->phone_number}", // Nomor tujuan
                             [
-                                "body" => $messageBody,
-                                "from" => getenv("TWILIO_PHONE_NUMBER"),
+                                "from" => getenv("TWILIO_PHONE_NUMBER"), // Nomor pengirim Twilio untuk WhatsApp
+                                "body" => $messageBody, // Pesan yang dikirim
                             ]
                         );
                     })
