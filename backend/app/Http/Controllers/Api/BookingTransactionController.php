@@ -58,12 +58,21 @@ class BookingTransactionController extends Controller
         $messageBody .= "with Booking TRX ID: {$bookingTransaction->booking_trx_id}.\n\n";
         $messageBody .= "We will update you on your booking status as soon as possible.";
 
-        // Mengirim pesan melalui SMS dengan Twilio
-        $message = $twilio->messages->create(
-            "+{$bookingTransaction->phone_number}", // Nomor tujuan
+        // Kirim melalui SMS
+        // $twilio->messages->create(
+        //     "+{$bookingTransaction->phone_number}", // Nomor tujuan
+        //     [
+        //         "body" => $messageBody,
+        //         "from" => getenv("TWILIO_PHONE_NUMBER"),
+        //     ]
+        // );
+
+        // Kirim melalui WhatsApp
+        $twilio->messages->create(
+            "whatsapp:+{$bookingTransaction->phone_number}", // Nomor tujuan
             [
-                "body" => $messageBody,
-                "from" => getenv("TWILIO_PHONE_NUMBER"),
+                "from" => getenv("TWILIO_PHONE_NUMBER"), // Nomor pengirim Twilio untuk WhatsApp
+                "body" => $messageBody, // Pesan yang dikirim
             ]
         );
 
