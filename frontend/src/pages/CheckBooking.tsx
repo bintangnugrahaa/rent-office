@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import { BookingDetails } from "../types/type";
 import { z } from "zod";
-import axios from "axios";
 import { viewBookingSchema } from "../types/validationBooking";
+import apiClient, { isAxiosError } from "../service/apiService";
 
 export default function CheckBooking() {
   const [formData, setFormData] = useState({
@@ -44,22 +44,17 @@ export default function CheckBooking() {
     setIsLoading(true);
 
     try {
-      const response = await axios.post(
-        "http://127.0.0.1:8000/api/check-booking",
+      const response = await apiClient.post(
+        "/check-booking",
         {
           ...formData,
-        },
-        {
-          headers: {
-            "X-API-KEY": import.meta.env.VITE_API_KEY,
-          },
         }
       );
 
       console.log("We are checking your booking:", response.data.data);
       setBookingDetails(response.data.data); // Set booking details
     } catch (error: unknown) {
-      if (axios.isAxiosError(error)) {
+      if (isAxiosError(error)) {
         console.log("Error submitting form:", error.message);
         setError(error.message);
       } else {
